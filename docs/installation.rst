@@ -12,8 +12,9 @@ Pre-requirements:
 - Basic familiarity with building ROS packages
 
 .. code-block:: bash
-
-  $ sudo apt-get install build-essential python-rosdep python-catkin-tools
+  $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
+  $ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+  $ sudo apt-get install build-essential python-rosdep python-catkin-tools cmake
 
 To compile from source, you need to clone the source code in a new or existing ``catkin`` workspace, use ``rosdep`` to install dependencies and finally compile the workspace using `catkin`. The following commands demonstrate this procedure in a newly created ``catkin`` workspace.
 
